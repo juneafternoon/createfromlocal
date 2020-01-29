@@ -15,8 +15,8 @@ git log 看本次窗口内操作的记录（详细)
 git reflog 全部的md5b版本号+日志
 
 
-git checkout --filename    还原工作区文件为最新版
-git reset HEAD fliename    stage(撤销暂存区改变)  还原暂存区文件为暂存区原始版（最后1次add动作）
+git checkout --filename    还原工作区文件为最新版（需要注意如果没有-- ,就变成对分支的操作），版本库或stage区的最后1次add 状态
+git reset HEAD或md5 fliename    stage(撤销暂存区改变)  还原暂存区文件为暂存区原始版（最后1次add动作）
 
 
 git rm filename
