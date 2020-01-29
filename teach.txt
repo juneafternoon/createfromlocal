@@ -61,3 +61,15 @@ git remote -v   即可查看git的服务器地址:
 查看git项目是从git的哪个分支上拉下来的命令?
 
 如果还想看项目是从git的那个分支上拉下来的,可以在命令行中输入:git remote show origin    即可:
+
+-------------------
+git stash 可以把当前分支 未add的状态 快照保存
+git stash pop 还原为快照状态
+
+-----------
+git cherry-pick 4c805e2 当前分支合并一个特定点提交动作
+
+
+指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接
+
+$ git branch --set-upstream-to=origin/dev dev
