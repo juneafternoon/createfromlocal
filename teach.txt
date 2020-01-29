@@ -1,0 +1,55 @@
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+$ git init  //当前目录设置为仓库
+
+git add  filename
+git commit -m "log..."
+
+git reset --hard HEAD~ （或者HEAD md5版本号
+
+git checkout --filename    还原工作区文件为最新版
+git reset HEAD fliename    stage(撤销暂存区改变)  还原暂存区文件为暂存区原始版（最后1次add动作）
+
+
+git rm filename
+git commit -m "log"
+
+
+///
+
+$ git checkout -b dev
+Switched to a new branch 'dev'
+git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>
+
+创建+切换分支：git checkout -b <name>
+
+合并某分支到当前分支：git merge <name>
+
+删除分支：git branch -d <name>
+
+$ git log --graph --pretty=oneline --abbrev-commit 查看分支合并
+
+$ git remote add origin_selfname git@github.com:juneafternoon/MyPrj.git 把本地仓库和远程仓库链接  //需要远程库先建立并且没有reamde.md
+
+$ git push -u origin_selfname master /
+
+git remote -v
+git remote remove origin  //删除 git remote -v 看到的加到本地的远程地址
+
+
+
+ ssh-keygen -t rsa -C "your_email@youremail.com" 
+
+
+git remote -v   即可查看git的服务器地址:
+
+查看git项目是从git的哪个分支上拉下来的命令?
+
+  如果还想看项目是从git的那个分支上拉下来的,可以在命令行中输入:git remote show origin    即可:
