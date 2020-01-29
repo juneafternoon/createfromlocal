@@ -1,3 +1,5 @@
+ 廖雪峰的官方网站Git教程 https://www.liaoxuefeng
+
 $ git config --global user.name "Your Name"
 $ git config --global user.email "email@example.com"
 
