@@ -51,12 +51,11 @@ git remote -v
 git remote remove origin  //删除 git remote -v 看到的加到本地的远程地址
 
 
-
- ssh-keygen -t rsa -C "your_email@youremail.com" 
+ssh-keygen -t rsa -C "your_email@youremail.com"  这个命令生成默认的id_rsa id_rsa.pub文件，正常不要改名，否则连接github认不到
 
 
 git remote -v   即可查看git的服务器地址:
 
 查看git项目是从git的哪个分支上拉下来的命令?
 
-  如果还想看项目是从git的那个分支上拉下来的,可以在命令行中输入:git remote show origin    即可:
+如果还想看项目是从git的那个分支上拉下来的,可以在命令行中输入:git remote show origin    即可:
