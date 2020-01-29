@@ -1,15 +1,22 @@
 $ git config --global user.name "Your Name"
 $ git config --global user.email "email@example.com"
 
-$ git init  //µ±Ç°Ä¿Â¼ÉèÖÃÎª²Ö¿â
+$ git init  //å½“å‰ç›®å½•è®¾ç½®ä¸ºä»“åº“
 
 git add  filename
 git commit -m "log..."
 
-git reset --hard HEAD~ £¨»òÕßHEAD md5°æ±¾ºÅ
 
-git checkout --filename    »¹Ô­¹¤×÷ÇøÎÄ¼şÎª×îĞÂ°æ
-git reset HEAD fliename    stage(³·ÏúÔİ´æÇø¸Ä±ä)  »¹Ô­Ôİ´æÇøÎÄ¼şÎªÔİ´æÇøÔ­Ê¼°æ£¨×îºó1´Îadd¶¯×÷£©
+git reset --hard HEAD^^   é€€æŒ‡å®šçš„^ä¸ªæ•°çš„ç‰ˆæœ¬ 
+git reset --hard HEAD~100  é€€100ä¸ªç‰ˆæœ¬
+git reset --hard md5ç‰ˆæœ¬å·
+
+git log çœ‹æœ¬æ¬¡çª—å£å†…æ“ä½œçš„è®°å½•ï¼ˆè¯¦ç»†)
+git reflog å…¨éƒ¨çš„md5bç‰ˆæœ¬å·+æ—¥å¿—
+
+
+git checkout --filename    è¿˜åŸå·¥ä½œåŒºæ–‡ä»¶ä¸ºæœ€æ–°ç‰ˆ
+git reset HEAD fliename    stage(æ’¤é”€æš‚å­˜åŒºæ”¹å˜)  è¿˜åŸæš‚å­˜åŒºæ–‡ä»¶ä¸ºæš‚å­˜åŒºåŸå§‹ç‰ˆï¼ˆæœ€å1æ¬¡addåŠ¨ä½œï¼‰
 
 
 git rm filename
@@ -20,36 +27,36 @@ git commit -m "log"
 
 $ git checkout -b dev
 Switched to a new branch 'dev'
-git checkoutÃüÁî¼ÓÉÏ-b²ÎÊı±íÊ¾´´½¨²¢ÇĞ»»£¬Ïàµ±ÓÚÒÔÏÂÁ½ÌõÃüÁî£º
+git checkoutå‘½ä»¤åŠ ä¸Š-bå‚æ•°è¡¨ç¤ºåˆ›å»ºå¹¶åˆ‡æ¢ï¼Œç›¸å½“äºä»¥ä¸‹ä¸¤æ¡å‘½ä»¤ï¼š
 
-²é¿´·ÖÖ§£ºgit branch
+æŸ¥çœ‹åˆ†æ”¯ï¼šgit branch
 
-´´½¨·ÖÖ§£ºgit branch <name>
+åˆ›å»ºåˆ†æ”¯ï¼šgit branch <name>
 
-ÇĞ»»·ÖÖ§£ºgit checkout <name>
+åˆ‡æ¢åˆ†æ”¯ï¼šgit checkout <name>
 
-´´½¨+ÇĞ»»·ÖÖ§£ºgit checkout -b <name>
+åˆ›å»º+åˆ‡æ¢åˆ†æ”¯ï¼šgit checkout -b <name>
 
-ºÏ²¢Ä³·ÖÖ§µ½µ±Ç°·ÖÖ§£ºgit merge <name>
+åˆå¹¶æŸåˆ†æ”¯åˆ°å½“å‰åˆ†æ”¯ï¼šgit merge <name>
 
-É¾³ı·ÖÖ§£ºgit branch -d <name>
+åˆ é™¤åˆ†æ”¯ï¼šgit branch -d <name>
 
-$ git log --graph --pretty=oneline --abbrev-commit ²é¿´·ÖÖ§ºÏ²¢
+$ git log --graph --pretty=oneline --abbrev-commit æŸ¥çœ‹åˆ†æ”¯åˆå¹¶
 
-$ git remote add origin_selfname git@github.com:juneafternoon/MyPrj.git °Ñ±¾µØ²Ö¿âºÍÔ¶³Ì²Ö¿âÁ´½Ó  //ĞèÒªÔ¶³Ì¿âÏÈ½¨Á¢²¢ÇÒÊÇ¿ÕµÄ£¬Ã»ÓĞÈÎºÎÎÄ¼ş
+$ git remote add origin_selfname git@github.com:juneafternoon/MyPrj.git æŠŠæœ¬åœ°ä»“åº“å’Œè¿œç¨‹ä»“åº“é“¾æ¥  //éœ€è¦è¿œç¨‹åº“å…ˆå»ºç«‹å¹¶ä¸”æ˜¯ç©ºçš„ï¼Œæ²¡æœ‰ä»»ä½•æ–‡ä»¶
 
 $ git push -u origin_selfname master /
 
 git remote -v
-git remote remove origin  //É¾³ı git remote -v ¿´µ½µÄ¼Óµ½±¾µØµÄÔ¶³ÌµØÖ·
+git remote remove origin  //åˆ é™¤ git remote -v çœ‹åˆ°çš„åŠ åˆ°æœ¬åœ°çš„è¿œç¨‹åœ°å€
 
 
 
  ssh-keygen -t rsa -C "your_email@youremail.com" 
 
 
-git remote -v   ¼´¿É²é¿´gitµÄ·şÎñÆ÷µØÖ·:
+git remote -v   å³å¯æŸ¥çœ‹gitçš„æœåŠ¡å™¨åœ°å€:
 
-²é¿´gitÏîÄ¿ÊÇ´ÓgitµÄÄÄ¸ö·ÖÖ§ÉÏÀ­ÏÂÀ´µÄÃüÁî?
+æŸ¥çœ‹gité¡¹ç›®æ˜¯ä»gitçš„å“ªä¸ªåˆ†æ”¯ä¸Šæ‹‰ä¸‹æ¥çš„å‘½ä»¤?
 
-  Èç¹û»¹Ïë¿´ÏîÄ¿ÊÇ´ÓgitµÄÄÇ¸ö·ÖÖ§ÉÏÀ­ÏÂÀ´µÄ,¿ÉÒÔÔÚÃüÁîĞĞÖĞÊäÈë:git remote show origin    ¼´¿É:
+  å¦‚æœè¿˜æƒ³çœ‹é¡¹ç›®æ˜¯ä»gitçš„é‚£ä¸ªåˆ†æ”¯ä¸Šæ‹‰ä¸‹æ¥çš„,å¯ä»¥åœ¨å‘½ä»¤è¡Œä¸­è¾“å…¥:git remote show origin    å³å¯:
