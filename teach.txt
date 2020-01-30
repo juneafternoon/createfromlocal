@@ -81,3 +81,13 @@ $ git branch --set-upstream-to=origin/dev dev
 
 3. 远程已经建立
 git branch -b 本地branch名称  origin/远程barnch名称
+
+//////////////////////////////////////////////////
+同一台机器配置多个账户用的ssh-key文件
+在 .ssh/config里配置
+Host github2
+HostName github.com
+User git
+IdentityFile C:/Users/Administrator/.ssh/git_afternooncg_rsa
+
+用github2代替 git@github.com
