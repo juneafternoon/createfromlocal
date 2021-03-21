@@ -5,6 +5,8 @@ $ git config --global user.email "email@example.com"
 
 $ git init  //当前目录设置为仓库
 
+ssh-keygen -t rsa -C "email"   //创建ssh 密钥
+
 git add  filename
 git commit -m "log..."
 
