@@ -81,12 +81,18 @@ git cherry-pick 4c805e2 当前分支合并一个特定点提交动作
 2.远程已经建立
 
 指定本地dev分支与远程origin/dev分支的链接，根据提示，设置dev和origin/dev的链接
-
-$ git branch --set-upstream-to=origin/dev dev
-
+方法1
+$ git branch --set-upstream-to=origin/my_branch my_branch   (本地分支已建立)
+方法2
+$ git branch --track my_branch origin/my_branch  (本地分支未建立)
+//可代替方法 git push -u origin my_branch
 3. 远程已经建立
 git branch -b 本地branch名称  origin/远程barnch名称
 
+查看本地-远程分支关联
+git branch -vv
+去除当前分支和远程对应分支关联
+git branch --unset-upstream 
 //////////////////////////////////////////////////
 同一台机器配置多个账户用的ssh-key文件
 在 .ssh/config里配置
