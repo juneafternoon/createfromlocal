@@ -43,7 +43,10 @@ git checkout命令加上-b参数表示创建并切换，相当于以下两条命
 
 合并某分支到当前分支：git merge <name>
 
-删除分支：git branch -d <name>
+删除分支：git branch -d <name>  需要已合并
+删除分支：git branch -D <name>
+删除远程分支 git push origin --delete [branchname] （并不会同时删除本地，本地还需要手动删掉 ）
+
 
 $ git log --graph --pretty=oneline --abbrev-commit 查看分支合并
 
