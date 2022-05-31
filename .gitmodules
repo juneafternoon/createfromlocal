@@ -1,0 +1,3 @@
+[submodule "helloworld"]
+	path = helloworld
+	url = git1:juneafternoon/helloworld.git
