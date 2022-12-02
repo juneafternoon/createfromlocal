@@ -87,7 +87,7 @@ $ git branch --set-upstream-to=origin/my_branch my_branch   (本地分支已建�
 $ git branch --track my_branch origin/my_branch  (本地分支未建立)
 //可代替方法 git push -u origin my_branch
 3. 远程已经建立
-git branch -b 本地branch名称  origin/远程barnch名称
+git checkout -b 本地branch名称  origin/远程barnch名称
 
 查看本地-远程分支关联
 git branch -vv
