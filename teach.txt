@@ -102,3 +102,14 @@ User git
 IdentityFile C:/Users/Administrator/.ssh/git_afternooncg_rsa
 
 用github2代替 git@github.com
+
+
+---------------------------
+子模块
+git submodule add -b <branch> --name <name> <repo-url> <local dir>
+git submodule add -b develop git@lab.skyunion.net:rd1-en/xproject/client_script.git script
+
+从当前项目移除 submodule
+git submodule deinit -f <submodule_path>
+rm -rf .git/modules/<submodule_path>
+git rm -f <submodule_path>
